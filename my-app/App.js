@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import batteryImage from './assets/battery.png'; // Import the battery image
-import profileImage from './assets/profile.png'; // Import the profile image
-import searchImage from './assets/search.png'; // Import the search image
-import cardImage from './assets/Card.png'; // Import the card image
-import sendImage from './assets/send.png'; // Import the send image
-import loanImage from './assets/loan.png'; // Import the loan image
-import topUpImage from './assets/topUp.png'; // Import the topUp image
-import appleImage from './assets/apple.png'; // Import the apple image
-import HomeComponent from './HomeComponent'; // Import the HomeComponent
+import batteryImage from './assets/battery.png'; 
+import profileImage from './assets/profile.png'; 
+import searchImage from './assets/search.png'; 
+import cardImage from './assets/Card.png'; 
+import sendImage from './assets/send.png'; 
+import loanImage from './assets/loan.png';
+import topUpImage from './assets/topUp.png'; 
+import appleImage from './assets/apple.png';
+import HomeComponent from './HomeComponent'; 
 
 export default function App() {
   return (
