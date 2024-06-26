@@ -20,7 +20,7 @@ export default function App() {
           source={batteryImage}
         />
       </View>
-      <View style={[styles.profileContainer, { marginTop: -190,marginLeft: -140  }]}>
+      <View style={[styles.profileContainer, { marginTop: -190, marginLeft: -140 }]}>
         <Image
           style={styles.profileImage}
           source={profileImage}
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 60,
+    backgroundColor: '#1e1e1e', // Blue-black color
   },
   statusBar: {
     position: 'absolute',
@@ -178,7 +179,8 @@ const styles = StyleSheet.create({
     width: 58,
     height: 58,
     borderRadius: 29,
-    backgroundColor: '#d3d3d3',
+    backgroundColor: '#263032',
   },
 });
+
 
