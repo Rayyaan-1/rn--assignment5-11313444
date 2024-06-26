@@ -4,8 +4,11 @@ import batteryImage from './assets/battery.png'; // Import the battery image
 import profileImage from './assets/profile.png'; // Import the profile image
 import searchImage from './assets/search.png'; // Import the search image
 import cardImage from './assets/Card.png'; // Import the card image
-
-
+import sendImage from './assets/send.png'; // Import the send image
+import loanImage from './assets/loan.png'; // Import the loan image
+import topUpImage from './assets/topUp.png'; // Import the topUp image
+import appleImage from './assets/apple.png'; // Import the apple image
+import HomeComponent from './HomeComponent'; // Import the HomeComponent
 
 export default function App() {
   return (
@@ -17,7 +20,7 @@ export default function App() {
           source={batteryImage}
         />
       </View>
-      <View style={styles.profileContainer}>
+      <View style={[styles.profileContainer, { marginTop: -190,marginLeft: -140  }]}>
         <Image
           style={styles.profileImage}
           source={profileImage}
@@ -36,8 +39,36 @@ export default function App() {
           style={styles.cardImage}
           source={cardImage}
         />
+        <View style={styles.imageRow}>
+          <View style={styles.imageContainer}>
+            <Image
+              style={styles.roundedImage}
+              source={sendImage}
+            />
+          </View>
+          <View style={styles.imageContainer}>
+            <Image
+              style={styles.roundedImage}
+              source={loanImage}
+            />
+          </View>
+          <View style={styles.imageContainer}>
+            <Image
+              style={styles.roundedImage}
+              source={topUpImage}
+            />
+          </View>
+        </View>
+        <Text style={styles.transactionText}>Transaction</Text>
+        <View style={styles.appleContainer}>
+          <Image
+            style={styles.roundedImage}
+            source={appleImage}
+          />
+        </View>
       </View>
-      
+      {/* Include HomeComponent */}
+      <HomeComponent />
     </View>
   );
 }
@@ -47,43 +78,45 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 60, // Adjust padding to avoid content overlap with status bar
+    paddingTop: 60,
   },
   statusBar: {
     position: 'absolute',
-    top: 20, // Adjust the vertical position
-    left: 10, // Adjust the left position
-    right: 10, // Ensure the right padding
+    top: 20,
+    left: 10,
+    right: 10,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between', // Distribute space between date and image
-    alignItems: 'center', // Align items vertically in the center
+    justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: '#fff',
   },
   timeText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#000',
-    marginLeft: 20, // Add left margin to the time text
+    marginLeft: 20,
   },
   statusImage: {
-    width: 100, // Increased width of the image
-    height: 50, // Increased height of the image
+    width: 100,
+    height: 50,
     resizeMode: 'contain',
   },
   profileContainer: {
-    flexDirection: 'row', // Arrange profile image, text, and search image horizontally
-    alignItems: 'flex-start', // Align items vertically at the start
-    marginTop: -280, // Position below the status bar with some space
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 0, 
+    marginBottom: 10,
+    paddingLeft: 20,
   },
   profileImage: {
-    width: 50, // Set the width of the profile image
-    height: 50, // Set the height of the profile image
+    width: 50,
+    height: 50,
     resizeMode: 'contain',
-    marginRight: 10, // Add space between the profile image and text
+    marginRight: 10,
   },
   profileTextContainer: {
-    marginRight: 10, // Add space between the text and search image
+    marginLeft: 10,
   },
   welcomeText: {
     fontSize: 16,
@@ -95,23 +128,57 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   searchImage: {
-    width: 160, // Set the width of the search image
-    height: 50, // Set the height of the search image
+    width: 40,
+    height: 40,
     resizeMode: 'contain',
   },
   cardContainer: {
-    marginTop: 20, // Add space between profile section and card
-    width: '90%', // Make the card take up 90% of the screen width
-    alignItems: 'center', // Center the card horizontally
+    marginTop: 20,
+    width: '90%',
+    alignItems: 'center',
   },
   cardImage: {
-    width: '100%', // Make the image take up the full width of the card container
-    height: 200, // Set the height of the card image
-    resizeMode: 'cover', // Cover the entire area of the image
-    borderRadius: 20, // Make the sides rounded
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+    borderRadius: 20,
   },
-  mainText: {
-    marginTop: 20, // Ensure main text is not overlapped by card
+  imageRow: {
+    flexDirection: 'row',
+    marginTop: 10,
+    alignSelf: 'flex-start',
+    marginLeft: 20,
+  },
+  imageContainer: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: '#d3d3d3',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 70,
+  },
+  roundedImage: {
+    width: 50,
+    height: 50,
+    resizeMode: 'contain',
+    borderRadius: 25,
+  },
+  transactionText: {
+    marginTop: 10,
     textAlign: 'center',
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  appleContainer: {
+    marginTop: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: '#d3d3d3',
   },
 });
+
